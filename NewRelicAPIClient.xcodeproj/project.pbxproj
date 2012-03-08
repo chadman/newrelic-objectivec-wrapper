@@ -17,6 +17,12 @@
 		FDF452E015087F2A0082E998 /* NewRelicAPIClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */; };
 		FDF452F2150882E80082E998 /* NRApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452F0150882E80082E998 /* NRApplication.h */; };
 		FDF452F3150882E80082E998 /* NRApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452F1150882E80082E998 /* NRApplication.m */; };
+		FDF452FC15090E270082E998 /* NRApplicationSummaryMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452FA15090E270082E998 /* NRApplicationSummaryMetric.h */; };
+		FDF452FD15090E270082E998 /* NRApplicationSummaryMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452FB15090E270082E998 /* NRApplicationSummaryMetric.m */; };
+		FDF453011509140D0082E998 /* NRDashboardFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452FF1509140D0082E998 /* NRDashboardFragment.h */; };
+		FDF453021509140D0082E998 /* NRDashboardFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453001509140D0082E998 /* NRDashboardFragment.m */; };
+		FDF453051509150D0082E998 /* NRThresholdValue.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF453031509150D0082E998 /* NRThresholdValue.h */; };
+		FDF453061509150D0082E998 /* NRThresholdValue.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453041509150D0082E998 /* NRThresholdValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRelicAPIClientTests.m; sourceTree = "<group>"; };
 		FDF452F0150882E80082E998 /* NRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplication.h; path = Model/NRApplication.h; sourceTree = "<group>"; };
 		FDF452F1150882E80082E998 /* NRApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplication.m; path = Model/NRApplication.m; sourceTree = "<group>"; };
+		FDF452FA15090E270082E998 /* NRApplicationSummaryMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplicationSummaryMetric.h; path = Model/NRApplicationSummaryMetric.h; sourceTree = "<group>"; };
+		FDF452FB15090E270082E998 /* NRApplicationSummaryMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplicationSummaryMetric.m; path = Model/NRApplicationSummaryMetric.m; sourceTree = "<group>"; };
+		FDF452FF1509140D0082E998 /* NRDashboardFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDashboardFragment.h; sourceTree = "<group>"; };
+		FDF453001509140D0082E998 /* NRDashboardFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDashboardFragment.m; sourceTree = "<group>"; };
+		FDF453031509150D0082E998 /* NRThresholdValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRThresholdValue.h; sourceTree = "<group>"; };
+		FDF453041509150D0082E998 /* NRThresholdValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRThresholdValue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +155,12 @@
 			children = (
 				FDF452F0150882E80082E998 /* NRApplication.h */,
 				FDF452F1150882E80082E998 /* NRApplication.m */,
+				FDF452FA15090E270082E998 /* NRApplicationSummaryMetric.h */,
+				FDF452FB15090E270082E998 /* NRApplicationSummaryMetric.m */,
+				FDF452FF1509140D0082E998 /* NRDashboardFragment.h */,
+				FDF453001509140D0082E998 /* NRDashboardFragment.m */,
+				FDF453031509150D0082E998 /* NRThresholdValue.h */,
+				FDF453041509150D0082E998 /* NRThresholdValue.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,6 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF452F2150882E80082E998 /* NRApplication.h in Headers */,
+				FDF452FC15090E270082E998 /* NRApplicationSummaryMetric.h in Headers */,
+				FDF453011509140D0082E998 /* NRDashboardFragment.h in Headers */,
+				FDF453051509150D0082E998 /* NRThresholdValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +292,9 @@
 			files = (
 				FDF452C915087F2A0082E998 /* NewRelicAPIClient.m in Sources */,
 				FDF452F3150882E80082E998 /* NRApplication.m in Sources */,
+				FDF452FD15090E270082E998 /* NRApplicationSummaryMetric.m in Sources */,
+				FDF453021509140D0082E998 /* NRDashboardFragment.m in Sources */,
+				FDF453061509150D0082E998 /* NRThresholdValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

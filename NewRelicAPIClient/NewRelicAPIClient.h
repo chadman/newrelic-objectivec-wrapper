@@ -11,8 +11,7 @@
 @interface NewRelicAPIClient : NSObject
 
 
-// Sets the api key for the New Relic API
-// Possible error of 403  for invalid API key
-+ (void) setApiKey: (NSString *)apiKey;
+// Sets the account id for the session along with the API key to do future API calls
++ (void) setAccountID: (NSString *)accountID withAPIKey:(NSString *)apiKey;
 
 @end

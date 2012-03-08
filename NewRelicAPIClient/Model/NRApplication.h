@@ -13,6 +13,11 @@
 @property (nonatomic, assign) NSInteger applicationID;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *overviewURL;
+@property (nonatomic, retain) NSArray *threshholdValues;
+
++ (NSArray *)getByAccountID: (NSInteger) accountID;
+
+- (void) delete;
 
 
 @end
