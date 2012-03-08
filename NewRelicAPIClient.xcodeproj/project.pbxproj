@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDF452C315087F2A0082E998 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452C215087F2A0082E998 /* Foundation.framework */; };
+		FDF452C915087F2A0082E998 /* NewRelicAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452C815087F2A0082E998 /* NewRelicAPIClient.m */; };
+		FDF452D115087F2A0082E998 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452D015087F2A0082E998 /* SenTestingKit.framework */; };
+		FDF452D315087F2A0082E998 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452D215087F2A0082E998 /* UIKit.framework */; };
+		FDF452D415087F2A0082E998 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452C215087F2A0082E998 /* Foundation.framework */; };
+		FDF452D715087F2A0082E998 /* libNewRelicAPIClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452BF15087F2A0082E998 /* libNewRelicAPIClient.a */; };
+		FDF452DD15087F2A0082E998 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDF452DB15087F2A0082E998 /* InfoPlist.strings */; };
+		FDF452E015087F2A0082E998 /* NewRelicAPIClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */; };
+		FDF452F2150882E80082E998 /* NRApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452F0150882E80082E998 /* NRApplication.h */; };
+		FDF452F3150882E80082E998 /* NRApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452F1150882E80082E998 /* NRApplication.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDF452D515087F2A0082E998 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDF452B615087F280082E998 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDF452BE15087F2A0082E998;
+			remoteInfo = NewRelicAPIClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDF452BF15087F2A0082E998 /* libNewRelicAPIClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNewRelicAPIClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF452C215087F2A0082E998 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FDF452C615087F2A0082E998 /* NewRelicAPIClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewRelicAPIClient-Prefix.pch"; sourceTree = "<group>"; };
+		FDF452C715087F2A0082E998 /* NewRelicAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRelicAPIClient.h; sourceTree = "<group>"; };
+		FDF452C815087F2A0082E998 /* NewRelicAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRelicAPIClient.m; sourceTree = "<group>"; };
+		FDF452CF15087F2A0082E998 /* NewRelicAPIClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewRelicAPIClientTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF452D015087F2A0082E998 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FDF452D215087F2A0082E998 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FDF452DA15087F2A0082E998 /* NewRelicAPIClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewRelicAPIClientTests-Info.plist"; sourceTree = "<group>"; };
+		FDF452DC15087F2A0082E998 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FDF452DE15087F2A0082E998 /* NewRelicAPIClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRelicAPIClientTests.h; sourceTree = "<group>"; };
+		FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRelicAPIClientTests.m; sourceTree = "<group>"; };
+		FDF452F0150882E80082E998 /* NRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplication.h; path = Model/NRApplication.h; sourceTree = "<group>"; };
+		FDF452F1150882E80082E998 /* NRApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplication.m; path = Model/NRApplication.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDF452BC15087F2A0082E998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF452C315087F2A0082E998 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF452CB15087F2A0082E998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF452D115087F2A0082E998 /* SenTestingKit.framework in Frameworks */,
+				FDF452D315087F2A0082E998 /* UIKit.framework in Frameworks */,
+				FDF452D415087F2A0082E998 /* Foundation.framework in Frameworks */,
+				FDF452D715087F2A0082E998 /* libNewRelicAPIClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDF452B415087F280082E998 = {
+			isa = PBXGroup;
+			children = (
+				FDF452C415087F2A0082E998 /* NewRelicAPIClient */,
+				FDF452D815087F2A0082E998 /* NewRelicAPIClientTests */,
+				FDF452C115087F2A0082E998 /* Frameworks */,
+				FDF452C015087F2A0082E998 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDF452C015087F2A0082E998 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452BF15087F2A0082E998 /* libNewRelicAPIClient.a */,
+				FDF452CF15087F2A0082E998 /* NewRelicAPIClientTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDF452C115087F2A0082E998 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452C215087F2A0082E998 /* Foundation.framework */,
+				FDF452D015087F2A0082E998 /* SenTestingKit.framework */,
+				FDF452D215087F2A0082E998 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDF452C415087F2A0082E998 /* NewRelicAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452EF15087FE30082E998 /* Enum */,
+				FDF452EE15087FDB0082E998 /* QueryObject */,
+				FDF452EC15087FB00082E998 /* Model */,
+				FDF452C715087F2A0082E998 /* NewRelicAPIClient.h */,
+				FDF452C815087F2A0082E998 /* NewRelicAPIClient.m */,
+				FDF452C515087F2A0082E998 /* Supporting Files */,
+			);
+			path = NewRelicAPIClient;
+			sourceTree = "<group>";
+		};
+		FDF452C515087F2A0082E998 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452C615087F2A0082E998 /* NewRelicAPIClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDF452D815087F2A0082E998 /* NewRelicAPIClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452DE15087F2A0082E998 /* NewRelicAPIClientTests.h */,
+				FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */,
+				FDF452D915087F2A0082E998 /* Supporting Files */,
+			);
+			path = NewRelicAPIClientTests;
+			sourceTree = "<group>";
+		};
+		FDF452D915087F2A0082E998 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452DA15087F2A0082E998 /* NewRelicAPIClientTests-Info.plist */,
+				FDF452DB15087F2A0082E998 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDF452EC15087FB00082E998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDF452F0150882E80082E998 /* NRApplication.h */,
+				FDF452F1150882E80082E998 /* NRApplication.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FDF452EE15087FDB0082E998 /* QueryObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QueryObject;
+			sourceTree = "<group>";
+		};
+		FDF452EF15087FE30082E998 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Enum;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FDF452BD15087F2A0082E998 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF452F2150882E80082E998 /* NRApplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FDF452BE15087F2A0082E998 /* NewRelicAPIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF452E315087F2A0082E998 /* Build configuration list for PBXNativeTarget "NewRelicAPIClient" */;
+			buildPhases = (
+				FDF452BB15087F2A0082E998 /* Sources */,
+				FDF452BC15087F2A0082E998 /* Frameworks */,
+				FDF452BD15087F2A0082E998 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewRelicAPIClient;
+			productName = NewRelicAPIClient;
+			productReference = FDF452BF15087F2A0082E998 /* libNewRelicAPIClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FDF452CE15087F2A0082E998 /* NewRelicAPIClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF452E615087F2A0082E998 /* Build configuration list for PBXNativeTarget "NewRelicAPIClientTests" */;
+			buildPhases = (
+				FDF452CA15087F2A0082E998 /* Sources */,
+				FDF452CB15087F2A0082E998 /* Frameworks */,
+				FDF452CC15087F2A0082E998 /* Resources */,
+				FDF452CD15087F2A0082E998 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDF452D615087F2A0082E998 /* PBXTargetDependency */,
+			);
+			name = NewRelicAPIClientTests;
+			productName = NewRelicAPIClientTests;
+			productReference = FDF452CF15087F2A0082E998 /* NewRelicAPIClientTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDF452B615087F280082E998 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FDF452B915087F280082E998 /* Build configuration list for PBXProject "NewRelicAPIClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FDF452B415087F280082E998;
+			productRefGroup = FDF452C015087F2A0082E998 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDF452BE15087F2A0082E998 /* NewRelicAPIClient */,
+				FDF452CE15087F2A0082E998 /* NewRelicAPIClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDF452CC15087F2A0082E998 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF452DD15087F2A0082E998 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FDF452CD15087F2A0082E998 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDF452BB15087F2A0082E998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF452C915087F2A0082E998 /* NewRelicAPIClient.m in Sources */,
+				FDF452F3150882E80082E998 /* NRApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF452CA15087F2A0082E998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF452E015087F2A0082E998 /* NewRelicAPIClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDF452D615087F2A0082E998 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDF452BE15087F2A0082E998 /* NewRelicAPIClient */;
+			targetProxy = FDF452D515087F2A0082E998 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDF452DB15087F2A0082E998 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDF452DC15087F2A0082E998 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDF452E115087F2A0082E998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FDF452E215087F2A0082E998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDF452E415087F2A0082E998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NewRelicAPIClient.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewRelicAPIClient/NewRelicAPIClient-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FDF452E515087F2A0082E998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NewRelicAPIClient.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewRelicAPIClient/NewRelicAPIClient-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FDF452E715087F2A0082E998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewRelicAPIClient/NewRelicAPIClient-Prefix.pch";
+				INFOPLIST_FILE = "NewRelicAPIClientTests/NewRelicAPIClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FDF452E815087F2A0082E998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewRelicAPIClient/NewRelicAPIClient-Prefix.pch";
+				INFOPLIST_FILE = "NewRelicAPIClientTests/NewRelicAPIClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDF452B915087F280082E998 /* Build configuration list for PBXProject "NewRelicAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF452E115087F2A0082E998 /* Debug */,
+				FDF452E215087F2A0082E998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF452E315087F2A0082E998 /* Build configuration list for PBXNativeTarget "NewRelicAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF452E415087F2A0082E998 /* Debug */,
+				FDF452E515087F2A0082E998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF452E615087F2A0082E998 /* Build configuration list for PBXNativeTarget "NewRelicAPIClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF452E715087F2A0082E998 /* Debug */,
+				FDF452E815087F2A0082E998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDF452B615087F280082E998 /* Project object */;
+}
