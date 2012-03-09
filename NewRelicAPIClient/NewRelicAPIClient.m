@@ -7,6 +7,7 @@
 //
 
 #import "NewRelicAPIClient.h"
+#import "NRUserDefaults.h"
 
 @implementation NewRelicAPIClient
 
@@ -19,5 +20,17 @@
     
     return self;
 }
+
++(void)setAccountID:(NSInteger)accountID withAPIKey:(NSString *)apiKey {
+	
+	[[NRUserDefaults sharedDefaults] setAccountID:accountID];
+	[[NRUserDefaults sharedDefaults] setAPIKey:apiKey];
+}
+
++ (void)removeKeys {
+	[[NRUserDefaults sharedDefaults] killAll];
+}
+
+
 
 @end

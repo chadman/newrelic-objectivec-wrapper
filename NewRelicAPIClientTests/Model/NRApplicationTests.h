@@ -1,5 +1,5 @@
 //
-//  NewRelicAPIClientTests.h
+//  NRApplicationTests.h
 //  NewRelicAPIClient
 //
 //  Created by Meyer, Chad on 3/8/12.
@@ -11,10 +11,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface NewRelicAPIClientTests : SenTestCase
+@interface NRApplicationTests : SenTestCase
 
-- (void) testSetAccountInformation;
-
-- (void) testRemoveAccountInformation;
+- (void) testGetAll;
 
 @end

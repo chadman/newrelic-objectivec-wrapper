@@ -14,15 +14,45 @@
 		FDF452D415087F2A0082E998 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452C215087F2A0082E998 /* Foundation.framework */; };
 		FDF452D715087F2A0082E998 /* libNewRelicAPIClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF452BF15087F2A0082E998 /* libNewRelicAPIClient.a */; };
 		FDF452DD15087F2A0082E998 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDF452DB15087F2A0082E998 /* InfoPlist.strings */; };
-		FDF452E015087F2A0082E998 /* NewRelicAPIClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */; };
 		FDF452F2150882E80082E998 /* NRApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452F0150882E80082E998 /* NRApplication.h */; };
 		FDF452F3150882E80082E998 /* NRApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452F1150882E80082E998 /* NRApplication.m */; };
 		FDF452FC15090E270082E998 /* NRApplicationSummaryMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452FA15090E270082E998 /* NRApplicationSummaryMetric.h */; };
 		FDF452FD15090E270082E998 /* NRApplicationSummaryMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF452FB15090E270082E998 /* NRApplicationSummaryMetric.m */; };
-		FDF453011509140D0082E998 /* NRDashboardFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF452FF1509140D0082E998 /* NRDashboardFragment.h */; };
-		FDF453021509140D0082E998 /* NRDashboardFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453001509140D0082E998 /* NRDashboardFragment.m */; };
-		FDF453051509150D0082E998 /* NRThresholdValue.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF453031509150D0082E998 /* NRThresholdValue.h */; };
-		FDF453061509150D0082E998 /* NRThresholdValue.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453041509150D0082E998 /* NRThresholdValue.m */; };
+		FDF4530D150924980082E998 /* NRApplicationSummaryMetric.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45307150924980082E998 /* NRApplicationSummaryMetric.h */; };
+		FDF4530E150924980082E998 /* NRApplicationSummaryMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45308150924980082E998 /* NRApplicationSummaryMetric.m */; };
+		FDF4530F150924980082E998 /* NRDashboardFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45309150924980082E998 /* NRDashboardFragment.h */; };
+		FDF45310150924980082E998 /* NRDashboardFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4530A150924980082E998 /* NRDashboardFragment.m */; };
+		FDF45311150924980082E998 /* NRThresholdValue.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF4530B150924980082E998 /* NRThresholdValue.h */; };
+		FDF45312150924980082E998 /* NRThresholdValue.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4530C150924980082E998 /* NRThresholdValue.m */; };
+		FDF45328150925D60082E998 /* DateUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45314150925D60082E998 /* DateUtility.h */; };
+		FDF45329150925D60082E998 /* DateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45315150925D60082E998 /* DateUtility.m */; };
+		FDF4532A150925D60082E998 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45317150925D60082E998 /* JSON.h */; };
+		FDF4532B150925D60082E998 /* NSObject+NRJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45318150925D60082E998 /* NSObject+NRJSON.h */; };
+		FDF4532C150925D60082E998 /* NSObject+NRJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45319150925D60082E998 /* NSObject+NRJSON.m */; };
+		FDF4532D150925D60082E998 /* NSString+NRJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF4531A150925D60082E998 /* NSString+NRJSON.h */; };
+		FDF4532E150925D60082E998 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4531B150925D60082E998 /* NSString+SBJSON.m */; };
+		FDF4532F150925D60082E998 /* NRJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF4531C150925D60082E998 /* NRJSON.h */; };
+		FDF45330150925D60082E998 /* NRJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4531D150925D60082E998 /* NRJSON.m */; };
+		FDF45331150925D60082E998 /* NRJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF4531E150925D60082E998 /* NRJsonBase.h */; };
+		FDF45332150925D60082E998 /* NRJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4531F150925D60082E998 /* NRJsonBase.m */; };
+		FDF45333150925D60082E998 /* NRJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45320150925D60082E998 /* NRJsonParser.h */; };
+		FDF45334150925D60082E998 /* NRJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45321150925D60082E998 /* NRJsonParser.m */; };
+		FDF45335150925D60082E998 /* NRJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45322150925D60082E998 /* NRJsonWriter.h */; };
+		FDF45336150925D60082E998 /* NRJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45323150925D60082E998 /* NRJsonWriter.m */; };
+		FDF45337150925D60082E998 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45324150925D60082E998 /* Utility.h */; };
+		FDF45338150925D60082E998 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45325150925D60082E998 /* Utility.m */; };
+		FDF45339150925D60082E998 /* WebRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF45326150925D60082E998 /* WebRequest.h */; };
+		FDF4533A150925D60082E998 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF45327150925D60082E998 /* WebRequest.m */; };
+		FDF4533E15098D910082E998 /* NRUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF4533C15098D900082E998 /* NRUserDefaults.h */; };
+		FDF4533F15098D910082E998 /* NRUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4533D15098D910082E998 /* NRUserDefaults.m */; };
+		FDF4534315098EB20082E998 /* NRUserDefaultsConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF4534115098EB20082E998 /* NRUserDefaultsConstants.h */; };
+		FDF4534415098EB20082E998 /* NRUserDefaultsConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4534215098EB20082E998 /* NRUserDefaultsConstants.m */; };
+		FDF4534B150996210082E998 /* NRUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4534A150996210082E998 /* NRUserDefaultsTests.m */; };
+		FDF4534E150999250082E998 /* NewRelicAPIClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4534D150999250082E998 /* NewRelicAPIClientTests.m */; };
+		FDF453511509BA6E0082E998 /* NRApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453501509BA6E0082E998 /* NRApplicationTests.m */; };
+		FDF453541509BD880082E998 /* NRXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF453521509BD850082E998 /* NRXMLParser.h */; };
+		FDF453551509BD880082E998 /* NRXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453531509BD860082E998 /* NRXMLParser.m */; };
+		FDF453561509BD880082E998 /* NRXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF453531509BD860082E998 /* NRXMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +76,47 @@
 		FDF452D215087F2A0082E998 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FDF452DA15087F2A0082E998 /* NewRelicAPIClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewRelicAPIClientTests-Info.plist"; sourceTree = "<group>"; };
 		FDF452DC15087F2A0082E998 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FDF452DE15087F2A0082E998 /* NewRelicAPIClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRelicAPIClientTests.h; sourceTree = "<group>"; };
-		FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRelicAPIClientTests.m; sourceTree = "<group>"; };
 		FDF452F0150882E80082E998 /* NRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplication.h; path = Model/NRApplication.h; sourceTree = "<group>"; };
 		FDF452F1150882E80082E998 /* NRApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplication.m; path = Model/NRApplication.m; sourceTree = "<group>"; };
 		FDF452FA15090E270082E998 /* NRApplicationSummaryMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplicationSummaryMetric.h; path = Model/NRApplicationSummaryMetric.h; sourceTree = "<group>"; };
 		FDF452FB15090E270082E998 /* NRApplicationSummaryMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplicationSummaryMetric.m; path = Model/NRApplicationSummaryMetric.m; sourceTree = "<group>"; };
-		FDF452FF1509140D0082E998 /* NRDashboardFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDashboardFragment.h; sourceTree = "<group>"; };
-		FDF453001509140D0082E998 /* NRDashboardFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDashboardFragment.m; sourceTree = "<group>"; };
-		FDF453031509150D0082E998 /* NRThresholdValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRThresholdValue.h; sourceTree = "<group>"; };
-		FDF453041509150D0082E998 /* NRThresholdValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRThresholdValue.m; sourceTree = "<group>"; };
+		FDF45307150924980082E998 /* NRApplicationSummaryMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplicationSummaryMetric.h; path = Model/NRApplicationSummaryMetric.h; sourceTree = "<group>"; };
+		FDF45308150924980082E998 /* NRApplicationSummaryMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplicationSummaryMetric.m; path = Model/NRApplicationSummaryMetric.m; sourceTree = "<group>"; };
+		FDF45309150924980082E998 /* NRDashboardFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRDashboardFragment.h; path = Model/NRDashboardFragment.h; sourceTree = "<group>"; };
+		FDF4530A150924980082E998 /* NRDashboardFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRDashboardFragment.m; path = Model/NRDashboardFragment.m; sourceTree = "<group>"; };
+		FDF4530B150924980082E998 /* NRThresholdValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRThresholdValue.h; path = Model/NRThresholdValue.h; sourceTree = "<group>"; };
+		FDF4530C150924980082E998 /* NRThresholdValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRThresholdValue.m; path = Model/NRThresholdValue.m; sourceTree = "<group>"; };
+		FDF45314150925D60082E998 /* DateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtility.h; sourceTree = "<group>"; };
+		FDF45315150925D60082E998 /* DateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtility.m; sourceTree = "<group>"; };
+		FDF45317150925D60082E998 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		FDF45318150925D60082E998 /* NSObject+NRJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NRJSON.h"; sourceTree = "<group>"; };
+		FDF45319150925D60082E998 /* NSObject+NRJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NRJSON.m"; sourceTree = "<group>"; };
+		FDF4531A150925D60082E998 /* NSString+NRJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NRJSON.h"; sourceTree = "<group>"; };
+		FDF4531B150925D60082E998 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		FDF4531C150925D60082E998 /* NRJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRJSON.h; sourceTree = "<group>"; };
+		FDF4531D150925D60082E998 /* NRJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRJSON.m; sourceTree = "<group>"; };
+		FDF4531E150925D60082E998 /* NRJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRJsonBase.h; sourceTree = "<group>"; };
+		FDF4531F150925D60082E998 /* NRJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRJsonBase.m; sourceTree = "<group>"; };
+		FDF45320150925D60082E998 /* NRJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRJsonParser.h; sourceTree = "<group>"; };
+		FDF45321150925D60082E998 /* NRJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRJsonParser.m; sourceTree = "<group>"; };
+		FDF45322150925D60082E998 /* NRJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRJsonWriter.h; sourceTree = "<group>"; };
+		FDF45323150925D60082E998 /* NRJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRJsonWriter.m; sourceTree = "<group>"; };
+		FDF45324150925D60082E998 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		FDF45325150925D60082E998 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		FDF45326150925D60082E998 /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequest.h; sourceTree = "<group>"; };
+		FDF45327150925D60082E998 /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequest.m; sourceTree = "<group>"; };
+		FDF4533C15098D900082E998 /* NRUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRUserDefaults.h; sourceTree = "<group>"; };
+		FDF4533D15098D910082E998 /* NRUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRUserDefaults.m; sourceTree = "<group>"; };
+		FDF4534115098EB20082E998 /* NRUserDefaultsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRUserDefaultsConstants.h; path = Constants/NRUserDefaultsConstants.h; sourceTree = "<group>"; };
+		FDF4534215098EB20082E998 /* NRUserDefaultsConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRUserDefaultsConstants.m; path = Constants/NRUserDefaultsConstants.m; sourceTree = "<group>"; };
+		FDF45349150996210082E998 /* NRUserDefaultsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRUserDefaultsTests.h; sourceTree = "<group>"; };
+		FDF4534A150996210082E998 /* NRUserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRUserDefaultsTests.m; sourceTree = "<group>"; };
+		FDF4534C150999250082E998 /* NewRelicAPIClientTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRelicAPIClientTests.h; sourceTree = "<group>"; };
+		FDF4534D150999250082E998 /* NewRelicAPIClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRelicAPIClientTests.m; sourceTree = "<group>"; };
+		FDF4534F1509BA6E0082E998 /* NRApplicationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRApplicationTests.h; path = Model/NRApplicationTests.h; sourceTree = "<group>"; };
+		FDF453501509BA6E0082E998 /* NRApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRApplicationTests.m; path = Model/NRApplicationTests.m; sourceTree = "<group>"; };
+		FDF453521509BD850082E998 /* NRXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRXMLParser.h; sourceTree = "<group>"; };
+		FDF453531509BD860082E998 /* NRXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRXMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +174,16 @@
 		FDF452C415087F2A0082E998 /* NewRelicAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				FDF4534015098E880082E998 /* Constants */,
+				FDF45313150925D60082E998 /* Shared */,
 				FDF452EF15087FE30082E998 /* Enum */,
 				FDF452EE15087FDB0082E998 /* QueryObject */,
 				FDF452EC15087FB00082E998 /* Model */,
 				FDF452C715087F2A0082E998 /* NewRelicAPIClient.h */,
 				FDF452C815087F2A0082E998 /* NewRelicAPIClient.m */,
 				FDF452C515087F2A0082E998 /* Supporting Files */,
+				FDF4533C15098D900082E998 /* NRUserDefaults.h */,
+				FDF4533D15098D910082E998 /* NRUserDefaults.m */,
 			);
 			path = NewRelicAPIClient;
 			sourceTree = "<group>";
@@ -134,9 +199,12 @@
 		FDF452D815087F2A0082E998 /* NewRelicAPIClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				FDF452DE15087F2A0082E998 /* NewRelicAPIClientTests.h */,
-				FDF452DF15087F2A0082E998 /* NewRelicAPIClientTests.m */,
+				FDF4533B15098C600082E998 /* Model */,
 				FDF452D915087F2A0082E998 /* Supporting Files */,
+				FDF45349150996210082E998 /* NRUserDefaultsTests.h */,
+				FDF4534A150996210082E998 /* NRUserDefaultsTests.m */,
+				FDF4534C150999250082E998 /* NewRelicAPIClientTests.h */,
+				FDF4534D150999250082E998 /* NewRelicAPIClientTests.m */,
 			);
 			path = NewRelicAPIClientTests;
 			sourceTree = "<group>";
@@ -153,14 +221,16 @@
 		FDF452EC15087FB00082E998 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FDF45307150924980082E998 /* NRApplicationSummaryMetric.h */,
+				FDF45308150924980082E998 /* NRApplicationSummaryMetric.m */,
+				FDF45309150924980082E998 /* NRDashboardFragment.h */,
+				FDF4530A150924980082E998 /* NRDashboardFragment.m */,
+				FDF4530B150924980082E998 /* NRThresholdValue.h */,
+				FDF4530C150924980082E998 /* NRThresholdValue.m */,
 				FDF452F0150882E80082E998 /* NRApplication.h */,
 				FDF452F1150882E80082E998 /* NRApplication.m */,
 				FDF452FA15090E270082E998 /* NRApplicationSummaryMetric.h */,
 				FDF452FB15090E270082E998 /* NRApplicationSummaryMetric.m */,
-				FDF452FF1509140D0082E998 /* NRDashboardFragment.h */,
-				FDF453001509140D0082E998 /* NRDashboardFragment.m */,
-				FDF453031509150D0082E998 /* NRThresholdValue.h */,
-				FDF453041509150D0082E998 /* NRThresholdValue.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +249,60 @@
 			name = Enum;
 			sourceTree = "<group>";
 		};
+		FDF45313150925D60082E998 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FDF45314150925D60082E998 /* DateUtility.h */,
+				FDF45315150925D60082E998 /* DateUtility.m */,
+				FDF45316150925D60082E998 /* SBJSON */,
+				FDF45324150925D60082E998 /* Utility.h */,
+				FDF45325150925D60082E998 /* Utility.m */,
+				FDF45326150925D60082E998 /* WebRequest.h */,
+				FDF45327150925D60082E998 /* WebRequest.m */,
+				FDF453521509BD850082E998 /* NRXMLParser.h */,
+				FDF453531509BD860082E998 /* NRXMLParser.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FDF45316150925D60082E998 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				FDF45317150925D60082E998 /* JSON.h */,
+				FDF45318150925D60082E998 /* NSObject+NRJSON.h */,
+				FDF45319150925D60082E998 /* NSObject+NRJSON.m */,
+				FDF4531A150925D60082E998 /* NSString+NRJSON.h */,
+				FDF4531B150925D60082E998 /* NSString+SBJSON.m */,
+				FDF4531C150925D60082E998 /* NRJSON.h */,
+				FDF4531D150925D60082E998 /* NRJSON.m */,
+				FDF4531E150925D60082E998 /* NRJsonBase.h */,
+				FDF4531F150925D60082E998 /* NRJsonBase.m */,
+				FDF45320150925D60082E998 /* NRJsonParser.h */,
+				FDF45321150925D60082E998 /* NRJsonParser.m */,
+				FDF45322150925D60082E998 /* NRJsonWriter.h */,
+				FDF45323150925D60082E998 /* NRJsonWriter.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
+		FDF4533B15098C600082E998 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDF4534F1509BA6E0082E998 /* NRApplicationTests.h */,
+				FDF453501509BA6E0082E998 /* NRApplicationTests.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FDF4534015098E880082E998 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FDF4534115098EB20082E998 /* NRUserDefaultsConstants.h */,
+				FDF4534215098EB20082E998 /* NRUserDefaultsConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -188,8 +312,22 @@
 			files = (
 				FDF452F2150882E80082E998 /* NRApplication.h in Headers */,
 				FDF452FC15090E270082E998 /* NRApplicationSummaryMetric.h in Headers */,
-				FDF453011509140D0082E998 /* NRDashboardFragment.h in Headers */,
-				FDF453051509150D0082E998 /* NRThresholdValue.h in Headers */,
+				FDF4530D150924980082E998 /* NRApplicationSummaryMetric.h in Headers */,
+				FDF4530F150924980082E998 /* NRDashboardFragment.h in Headers */,
+				FDF45311150924980082E998 /* NRThresholdValue.h in Headers */,
+				FDF45328150925D60082E998 /* DateUtility.h in Headers */,
+				FDF4532A150925D60082E998 /* JSON.h in Headers */,
+				FDF4532B150925D60082E998 /* NSObject+NRJSON.h in Headers */,
+				FDF4532D150925D60082E998 /* NSString+NRJSON.h in Headers */,
+				FDF4532F150925D60082E998 /* NRJSON.h in Headers */,
+				FDF45331150925D60082E998 /* NRJsonBase.h in Headers */,
+				FDF45333150925D60082E998 /* NRJsonParser.h in Headers */,
+				FDF45335150925D60082E998 /* NRJsonWriter.h in Headers */,
+				FDF45337150925D60082E998 /* Utility.h in Headers */,
+				FDF45339150925D60082E998 /* WebRequest.h in Headers */,
+				FDF4533E15098D910082E998 /* NRUserDefaults.h in Headers */,
+				FDF4534315098EB20082E998 /* NRUserDefaultsConstants.h in Headers */,
+				FDF453541509BD880082E998 /* NRXMLParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +431,21 @@
 				FDF452C915087F2A0082E998 /* NewRelicAPIClient.m in Sources */,
 				FDF452F3150882E80082E998 /* NRApplication.m in Sources */,
 				FDF452FD15090E270082E998 /* NRApplicationSummaryMetric.m in Sources */,
-				FDF453021509140D0082E998 /* NRDashboardFragment.m in Sources */,
-				FDF453061509150D0082E998 /* NRThresholdValue.m in Sources */,
+				FDF4530E150924980082E998 /* NRApplicationSummaryMetric.m in Sources */,
+				FDF45310150924980082E998 /* NRDashboardFragment.m in Sources */,
+				FDF45312150924980082E998 /* NRThresholdValue.m in Sources */,
+				FDF45329150925D60082E998 /* DateUtility.m in Sources */,
+				FDF4532C150925D60082E998 /* NSObject+NRJSON.m in Sources */,
+				FDF4532E150925D60082E998 /* NSString+SBJSON.m in Sources */,
+				FDF45330150925D60082E998 /* NRJSON.m in Sources */,
+				FDF45332150925D60082E998 /* NRJsonBase.m in Sources */,
+				FDF45334150925D60082E998 /* NRJsonParser.m in Sources */,
+				FDF45336150925D60082E998 /* NRJsonWriter.m in Sources */,
+				FDF45338150925D60082E998 /* Utility.m in Sources */,
+				FDF4533A150925D60082E998 /* WebRequest.m in Sources */,
+				FDF4533F15098D910082E998 /* NRUserDefaults.m in Sources */,
+				FDF4534415098EB20082E998 /* NRUserDefaultsConstants.m in Sources */,
+				FDF453551509BD880082E998 /* NRXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +453,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF452E015087F2A0082E998 /* NewRelicAPIClientTests.m in Sources */,
+				FDF4534B150996210082E998 /* NRUserDefaultsTests.m in Sources */,
+				FDF4534E150999250082E998 /* NewRelicAPIClientTests.m in Sources */,
+				FDF453511509BA6E0082E998 /* NRApplicationTests.m in Sources */,
+				FDF453561509BD880082E998 /* NRXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

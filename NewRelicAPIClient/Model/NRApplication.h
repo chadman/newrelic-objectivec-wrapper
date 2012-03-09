@@ -8,16 +8,80 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NRApplication : NSObject
+@interface NRApplication : NSObject <NSCoding>
 
 @property (nonatomic, assign) NSInteger applicationID;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *overviewURL;
-@property (nonatomic, retain) NSArray *threshholdValues;
+@property (strong) NSString *name;
+@property (strong) NSString *overviewURL;
+@property (strong) NSArray *threshholdValues;
 
-+ (NSArray *)getByAccountID: (NSInteger) accountID;
 
-- (void) delete;
++ (NRApplication *) populateWithDictionary: (NSDictionary *)dict;
+
+
+/*! 
+ @method      getAll:
+ 
+ @abstract 
+ Performs a synchronous call the New Relic API Application
+ resource. It assumes the developer has set the account id
+ and the API key.
+ 
+ 
+ @discussion
+ 
+ @param
+ error     Out parameter (may be NULL) used if an error occurs
+ while processing the request. Will not be modified if the 
+ load succeeds.
+ 
+ @result      An array of NR Application objects or nil if 
+ the load failed.
+ */
++ (NSArray *)getAll: (NSError **)error;
+
+
+/*! 
+ @method      getAllUsingCallback:
+ 
+ @abstract 
+ Performs a asynchronous call the New Relic API Application
+ resource. It assumes the developer has set the account id
+ and the API key.
+ 
+ 
+ @discussion
+ 
+ @param
+ returnedApplications	The block that is performed after the
+ request to the new relic api has happened.
+
+ */
++ (void)getAllUsingCallback:(void (^)(NSArray *))returnedApplications;
+
+
+/*! 
+ @method      delete:
+ 
+ @abstract 
+ Deletes the specific application. The application will be deleted
+ in New Relic, use with caution
+ 
+ 
+ @discussion
+ Deleting an application can be dangerous and you can lose all
+ the data pertaining to that application. It is suggested that 
+ when using this method that there is a confirmation question 
+ given to the user before performing
+ 
+ @param
+ error     Out parameter (may be NULL) used if an error occurs
+ while processing the request. Will not be modified if the 
+ load succeeds.
+ 
+ */
+- (void) delete: (NSError **)error;
+
 
 
 @end
