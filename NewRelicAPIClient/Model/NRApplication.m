@@ -55,6 +55,47 @@
 	
 }
 
++ (void)getAllUsingCallback:(void (^)(NSArray *))resultsBlock error:(void (^)(NSError *))errorBlock {
+	
+	
+	WebRequest *request = [[WebRequest alloc] init];
+	NSString *stringURL = [NSString stringWithFormat:@"https://rpm.newrelic.com/accounts/%d/applications.xml", [[NRUserDefaults sharedDefaults] accountID]];
+	
+
+	[request makeWebRequest:[NSURL URLWithString:stringURL] 
+			withContentType:WebRequestContentTypeXml 
+			  usingCallback:^(id returnedResults) {
+				  
+				  NSMutableArray *applications = [[NSMutableArray alloc] initWithObjects:nil];
+				  NSDictionary *applicationResults = nil;
+				  
+				  if (returnedResults && ![returnedResults isEqual:[NSNull null]]) {
+					  
+					  if ([returnedResults isKindOfClass:[NSDictionary class]]) {
+						  applicationResults = [((NSDictionary *)returnedResults) objectForKey:@"applications"];
+					  }
+					  
+					  // Go through each one and add to the applications to an array
+					  for (NSDictionary *value in [applicationResults objectForKey:@"application"]) {
+						  [applications addObject:[NRApplication populateWithDictionary:value]];
+					  }
+				  }
+				  
+				  // In case they are stupid enough to not create a results block
+				  if (resultsBlock) {
+					  resultsBlock([applications copy]);
+				  }
+			  }
+				 errorBlock:^(NSError *localError) {
+					 
+					 if (errorBlock) {
+						 errorBlock(localError);
+					 }
+				 }
+	 ];
+}
+
+
 + (NRApplication *)populateWithDictionary:(NSDictionary *)dict {
 	return [[NRApplication alloc] initWithDictionary:dict];
 }
@@ -81,6 +122,14 @@
 	}
 	
 	return self;
+}
+
+- (void) delete:(NSError *__autoreleasing *)error {
+	
+	NSMutableDictionary* details = [NSMutableDictionary dictionary];
+	[details setValue:@"method not implemented" forKey:NSLocalizedDescriptionKey];
+	
+	*error = [NSError errorWithDomain:@"com.52projects.newrelicapi" code:500 userInfo:details];
 }
 
 

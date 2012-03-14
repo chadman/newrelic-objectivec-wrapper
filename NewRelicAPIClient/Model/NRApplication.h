@@ -53,11 +53,14 @@
  @discussion
  
  @param
- returnedApplications	The block that is performed after the
+ resultsBlock	The block that is performed after the
  request to the new relic api has happened.
+ 
+ @param
+ errorBlock	If the requests errors for any reason, a block is available for that
 
  */
-+ (void)getAllUsingCallback:(void (^)(NSArray *))returnedApplications;
++ (void)getAllUsingCallback:(void (^)(NSArray *))resultsBlock error:(void (^)(NSError *))errorBlock;
 
 
 /*! 

@@ -63,6 +63,14 @@ NSString *_infoListFileName		= @"info.plist";
 	return NO;
 }
 
++ (float) convertToFloat: (id) value {
+	if (![value isKindOfClass:[NSNull class]] && ([value isKindOfClass:[NSNumber class]] || [value isKindOfClass:[NSString class]])) {
+		return [value floatValue];
+	}
+	
+	return INT32_MIN;
+}
+
 +(int) convertToInt:(id) value {
 	
 	if (![value isKindOfClass:[NSNull class]] && ([value isKindOfClass:[NSNumber class]] || [value isKindOfClass:[NSString class]])) {
@@ -88,6 +96,16 @@ NSString *_infoListFileName		= @"info.plist";
 	}
 	else {
 		return [DateUtility dateAndTimeFromString:value];
+	}
+}
+
+
++(NSDate *) convertToCustomNSDate: (id) value formatter: (NSString *)format {
+	if ([value isEqual:[NSNull null]]) {
+		return nil;
+	}
+	else {
+		return [DateUtility dateFromString:value withDateFormat:format];
 	}
 }
 

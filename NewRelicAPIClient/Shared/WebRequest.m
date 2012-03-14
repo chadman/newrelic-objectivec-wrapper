@@ -6,7 +6,8 @@
 
 @interface WebRequest (PRIVATE)
 
-- (NSString *) contentType:(WebRequestContentType)type;
+- (NSString *) createContentType:(WebRequestContentType)type;
+- (NSMutableURLRequest *) createURLRequest:(NSURL *)url;
 
 @end
 
@@ -17,20 +18,18 @@
 @synthesize responseData;
 @synthesize requestError;
 @synthesize storedBlock;
+@synthesize webRequestErrorBlock;
+@synthesize webRequestContentType;
 
 
-- (void) makeWebRequest: (NSURL *) theUrl withContentType: (WebRequestContentType)contentType usingCallback:(void (^)(id))returnedResults {
-    
-    NSLog(@"Making request to %@", theUrl);
-    
-    self.storedBlock = returnedResults;
+- (void) makeWebRequest: (NSURL *) theUrl withContentType: (WebRequestContentType)contentType usingCallback:(void (^)(id))callBackBlock errorBlock:(void (^)(NSError *))errorBlock {
+
+    self.storedBlock = callBackBlock;
+	self.webRequestErrorBlock = errorBlock;
+	self.webRequestContentType = contentType;
 	
 	// Create the request 
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:theUrl];	
-	
-	[request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
-	[request setValue:[self contentType:contentType] forHTTPHeaderField:@"Content-Type"]; 
-	
+	NSMutableURLRequest *request = [self createURLRequest:theUrl];
 	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 	responseData = [NSMutableData data];
 }
@@ -38,11 +37,10 @@
 - (id) putWebRequest:(NSURL *)theUrl withContentType: (WebRequestContentType)contentType withData:(NSData *)data withError:(NSError **)error {
 	
 	NSURLResponse *localResponse = nil;
+	self.webRequestContentType = contentType;
     
     // Create the request 
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:theUrl];
-	[request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
-	[request setValue:[self contentType:contentType] forHTTPHeaderField:@"Content-Type"]; 
+	NSMutableURLRequest *request = [self createURLRequest:theUrl];
 	[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
 	[request setHTTPMethod:@"PUT"];
     [request setHTTPBody:data];
@@ -64,16 +62,14 @@
 }
 
 
-- (void) putWebRequest: (NSURL *)theUrl withContentType: (WebRequestContentType)contentType withData: (NSData *)data usingCallback:(void (^)(id))returnedResults {
-    
-    NSLog(@"Posting request to %@", theUrl);
-    
+- (void) putWebRequest: (NSURL *)theUrl withContentType: (WebRequestContentType)contentType withData: (NSData *)data usingCallback:(void (^)(id))returnedResults errorBlock:(void (^)(NSError *))error {
+
     self.storedBlock = returnedResults;
+	self.webRequestErrorBlock = error;
+	self.webRequestContentType = contentType;
     
     // Create the request 
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:theUrl];	
-	[request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
-	[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"]; 
+	NSMutableURLRequest *request = [self createURLRequest:theUrl];	
     [request setHTTPMethod:@"PUT"];
     [request setHTTPBody:data];
 	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -82,16 +78,13 @@
 
 - (id) postWebRequest:(NSURL *)theUrl withContentType: (WebRequestContentType)contentType withData:(NSData *)data withError:(NSError **)error {
 
-    NSLog(@"Posting request to %@", theUrl);
-	
 	NSError *localError = nil;
 	NSURLResponse *localResponse = nil;
+	self.webRequestContentType = contentType;
     
     // Create the request 
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:theUrl];
+	NSMutableURLRequest *request = [self createURLRequest:theUrl];
 	[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
-	[request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
-	[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"]; 
 	[request setHTTPMethod:@"POST"];
     [request setHTTPBody:data];
 	
@@ -113,16 +106,14 @@
     return localError;
 }
 
-- (void) postWebRequest: (NSURL *)theUrl withContentType: (WebRequestContentType)contentType withData: (NSData *)data usingCallback:(void (^)(id))returnedResults {
-    
-    NSLog(@"Posting request to %@", theUrl);
+- (void) postWebRequest: (NSURL *)theUrl withContentType: (WebRequestContentType)contentType withData: (NSData *)data usingCallback:(void (^)(id))returnedResults errorBlock:(void (^)(NSError *))error {
     
     self.storedBlock = returnedResults;
-    
+    self.webRequestErrorBlock = error;
+	self.webRequestContentType = contentType;
+	
     // Create the request 
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:theUrl];	
-	[request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
-	[request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"]; 
+	NSMutableURLRequest *request = [self createURLRequest:theUrl];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:data];
 	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -132,14 +123,12 @@
 - (id) makeWebRequest: (NSURL *)theUrl withContentType: (WebRequestContentType)contentType withError:(NSError **)error {
 
 	NSURLResponse *localResponse = nil;
+	self.webRequestContentType = contentType;
     
 	// Create the request 
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:theUrl];
+	NSMutableURLRequest *request = [self createURLRequest:theUrl];
 	[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
 	[request setHTTPMethod:@"GET"];
-	[request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
-	[request setValue:[self contentType:contentType] forHTTPHeaderField:@"Content-Type"]; 
-	
 	responseData = (NSMutableData *)[NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&localResponse
                                                      error:&*error];
@@ -199,14 +188,33 @@
 	
 	NSString *responseBody = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	NSLog(@"Web Request Response :: %@", responseBody);
+	NSError *connectionError = nil;
+	NSDictionary *storedBlockResults = nil;
     
-    self.storedBlock([responseBody JSONValue]);
+	switch (self.webRequestContentType) {
+		case WebRequestContentTypeXml:
+			
+			storedBlockResults = [NRXMLParser dictionaryForXMLString:responseBody error:&connectionError];
+			
+			if (connectionError) {
+				self.webRequestErrorBlock(connectionError);
+			}
+			else {
+				self.storedBlock(storedBlockResults);
+			}
+			break;
+		case WebRequestContentTypeJson:
+			self.storedBlock([responseBody JSONValue]);
+		default:
+			break;
+	}
+    
 }
 
 
 #pragma mark Private Methods
 
-- (NSString *) contentType:(WebRequestContentType)type  {
+- (NSString *) createContentType:(WebRequestContentType)type {
 	
 	switch (type) {
 		case WebRequestContentTypeXml:
@@ -218,4 +226,12 @@
 	return nil;
 }
 
+ - (NSMutableURLRequest *) createURLRequest:(NSURL *)url {
+	 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];	
+	 [request setValue:[[NRUserDefaults sharedDefaults] APIKey] forHTTPHeaderField:@"x-api-key"];
+	 [request setValue:[self createContentType:[self webRequestContentType]] forHTTPHeaderField:@"Content-Type"]; 
+	 
+	 return request;
+ }
+	 
 @end

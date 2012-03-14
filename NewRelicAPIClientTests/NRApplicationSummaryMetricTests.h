@@ -1,8 +1,8 @@
 //
-//  NRApplicationTests.h
+//  NRApplicationSummaryMetricTests.h
 //  NewRelicAPIClient
 //
-//  Created by Meyer, Chad on 3/8/12.
+//  Created by Meyer, Chad on 3/13/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,10 +12,10 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "BaseTests.h"
 
-@interface NRApplicationTests : BaseTests
+@interface NRApplicationSummaryMetricTests : BaseTests
 
-- (void) testNRApplicationGetAll;
+- (void) testNRApplicationSummaryMetricGetByAppID;
 
-- (void) testNRApplicationGetAllUsingCallback;
+- (void) testNRApplicationSummaryMetricGetByAppIDUsingCallback;
 
 @end

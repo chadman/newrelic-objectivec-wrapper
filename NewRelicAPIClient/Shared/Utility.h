@@ -11,9 +11,13 @@
 
 +(int) convertToInt:(id) value;
 
++(float) convertToFloat: (id) value;
+
 // Convert an object to an NSDate
 +(NSDate *) convertToNSDate: (id) value;
 
 // Convert an object to a full date NSDate
 +(NSDate *) convertToFullNSDate: (id) value;
+
++(NSDate *) convertToCustomNSDate: (id) value formatter: (NSString *)format;
 @end
