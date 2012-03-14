@@ -7,3 +7,6 @@
 #import "NRThresholdValue.h"
 #import "NRMetricNameQO.h"
 #import "NRMetricName.h"
+#import "NRMetricData.h"
+#import "NRFieldData.h"
+#import "NRMetricDataQO.h"

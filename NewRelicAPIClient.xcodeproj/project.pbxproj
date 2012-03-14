@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD63C1041510536D00EE2921 /* NRMetricDataQO.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63C1021510536D00EE2921 /* NRMetricDataQO.h */; };
+		FD63C1051510536D00EE2921 /* NRMetricDataQO.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63C1031510536D00EE2921 /* NRMetricDataQO.m */; };
+		FD63C109151059D500EE2921 /* NRMetricDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63C108151059D500EE2921 /* NRMetricDataTests.m */; };
+		FD63C10C15105A1F00EE2921 /* NRMetricData.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63C10A15105A1F00EE2921 /* NRMetricData.h */; };
+		FD63C10D15105A1F00EE2921 /* NRMetricData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63C10B15105A1F00EE2921 /* NRMetricData.m */; };
+		FD63C11015105FC800EE2921 /* NRFieldData.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63C10E15105FC700EE2921 /* NRFieldData.h */; };
+		FD63C11115105FC800EE2921 /* NRFieldData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63C10F15105FC700EE2921 /* NRFieldData.m */; };
 		FD95A7DC150EB2CE000E21E6 /* BaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD95A7DB150EB2CE000E21E6 /* BaseTests.m */; };
 		FD95A7DE150EB454000E21E6 /* NewRelicAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = FD95A7DD150EB454000E21E6 /* NewRelicAPI.h */; };
 		FD95A7E1150EB543000E21E6 /* NRApplicationSummaryMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = FD95A7DF150EB543000E21E6 /* NRApplicationSummaryMetrics.h */; };
@@ -76,6 +83,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD63C1021510536D00EE2921 /* NRMetricDataQO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRMetricDataQO.h; path = Model/NRMetricDataQO.h; sourceTree = "<group>"; };
+		FD63C1031510536D00EE2921 /* NRMetricDataQO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRMetricDataQO.m; path = Model/NRMetricDataQO.m; sourceTree = "<group>"; };
+		FD63C107151059D500EE2921 /* NRMetricDataTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRMetricDataTests.h; path = Model/NRMetricDataTests.h; sourceTree = "<group>"; };
+		FD63C108151059D500EE2921 /* NRMetricDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRMetricDataTests.m; path = Model/NRMetricDataTests.m; sourceTree = "<group>"; };
+		FD63C10A15105A1F00EE2921 /* NRMetricData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRMetricData.h; path = Model/NRMetricData.h; sourceTree = "<group>"; };
+		FD63C10B15105A1F00EE2921 /* NRMetricData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRMetricData.m; path = Model/NRMetricData.m; sourceTree = "<group>"; };
+		FD63C10E15105FC700EE2921 /* NRFieldData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRFieldData.h; path = Model/NRFieldData.h; sourceTree = "<group>"; };
+		FD63C10F15105FC700EE2921 /* NRFieldData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRFieldData.m; path = Model/NRFieldData.m; sourceTree = "<group>"; };
 		FD95A7DA150EB2CE000E21E6 /* BaseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTests.h; sourceTree = "<group>"; };
 		FD95A7DB150EB2CE000E21E6 /* BaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTests.m; sourceTree = "<group>"; };
 		FD95A7DD150EB454000E21E6 /* NewRelicAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRelicAPI.h; sourceTree = "<group>"; };
@@ -259,6 +274,10 @@
 				FD95A7E715100E7E000E21E6 /* NRAccount.m */,
 				FD95A7EA15101EBC000E21E6 /* NRMetricName.h */,
 				FD95A7EB15101EBD000E21E6 /* NRMetricName.m */,
+				FD63C10A15105A1F00EE2921 /* NRMetricData.h */,
+				FD63C10B15105A1F00EE2921 /* NRMetricData.m */,
+				FD63C10E15105FC700EE2921 /* NRFieldData.h */,
+				FD63C10F15105FC700EE2921 /* NRFieldData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -270,6 +289,8 @@
 				FD95A7EF15101FAA000E21E6 /* NRMetricNameQO.m */,
 				FD95A7F2151020EF000E21E6 /* NRBaseQO.h */,
 				FD95A7F3151020EF000E21E6 /* NRBaseQO.m */,
+				FD63C1021510536D00EE2921 /* NRMetricDataQO.h */,
+				FD63C1031510536D00EE2921 /* NRMetricDataQO.m */,
 			);
 			name = QueryObject;
 			sourceTree = "<group>";
@@ -326,6 +347,8 @@
 				FD95A7E4150FFA73000E21E6 /* NRApplicationSummaryMetricTests.m */,
 				FD95A7F615102445000E21E6 /* NRMetricNameTests.h */,
 				FD95A7F715102445000E21E6 /* NRMetricNameTests.m */,
+				FD63C107151059D500EE2921 /* NRMetricDataTests.h */,
+				FD63C108151059D500EE2921 /* NRMetricDataTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -368,6 +391,9 @@
 				FD95A7EC15101EBD000E21E6 /* NRMetricName.h in Headers */,
 				FD95A7F015101FAA000E21E6 /* NRMetricNameQO.h in Headers */,
 				FD95A7F4151020EF000E21E6 /* NRBaseQO.h in Headers */,
+				FD63C1041510536D00EE2921 /* NRMetricDataQO.h in Headers */,
+				FD63C10C15105A1F00EE2921 /* NRMetricData.h in Headers */,
+				FD63C11015105FC800EE2921 /* NRFieldData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +515,9 @@
 				FD95A7ED15101EBD000E21E6 /* NRMetricName.m in Sources */,
 				FD95A7F115101FAA000E21E6 /* NRMetricNameQO.m in Sources */,
 				FD95A7F5151020EF000E21E6 /* NRBaseQO.m in Sources */,
+				FD63C1051510536D00EE2921 /* NRMetricDataQO.m in Sources */,
+				FD63C10D15105A1F00EE2921 /* NRMetricData.m in Sources */,
+				FD63C11115105FC800EE2921 /* NRFieldData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +532,7 @@
 				FD95A7DC150EB2CE000E21E6 /* BaseTests.m in Sources */,
 				FD95A7E5150FFA73000E21E6 /* NRApplicationSummaryMetricTests.m in Sources */,
 				FD95A7F815102445000E21E6 /* NRMetricNameTests.m in Sources */,
+				FD63C109151059D500EE2921 /* NRMetricDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

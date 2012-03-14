@@ -17,6 +17,11 @@
 		NSDateFormatter *df = [[NSDateFormatter alloc] init];
 		[df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
 		NSDate *date = [df dateFromString:dateString];
+		
+		if (!date) {
+			[df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+			date = [df dateFromString:dateString];
+		}
 		return date;	
 	}
 	else {
@@ -42,6 +47,19 @@
 	[df setDateFormat:@"dd MMM yyyy"];
 	NSString *stringDate = [df stringFromDate:date];
 	return stringDate;
+}
+
++ (NSString *)stringFromDateAndTimeFrom:(NSDate *)date {
+	
+	if (date != nil) {
+		NSDateFormatter *df = [[NSDateFormatter alloc] init];
+		[df setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+		NSString *dateString = [df stringFromDate:date];
+		return dateString;	
+	}
+	else {
+		return nil;
+	}
 }
 
 + (NSString *)stringFromDate:(NSDate *)date withDateFormat: (NSString *)format {

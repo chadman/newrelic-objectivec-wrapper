@@ -1,10 +1,3 @@
-//
-//  BaseTests.m
-//  NewRelicAPIClient
-//
-//  Created by Meyer, Chad on 3/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
 
 #import "BaseTests.h"
 #import "NRUserDefaults.h"
@@ -12,9 +5,9 @@
 @implementation BaseTests
 
 // Set the account and api key. You cant have mine you gotta make your own
-NSString * const kTestNewRelicAPIKey = @"";
-int const kTestNewRelicAccountID = 0;
-NSString * const kTestApplicationName = @""; 
+NSString * const kTestNewRelicAPIKey = @"a79c6bc1e2ce855ecc78745525eed422595209252a38a0d";
+int const kTestNewRelicAccountID = 25945;
+NSString * const kTestApplicationName = @"InFellowship"; 
 
 
 - (void) setUp {

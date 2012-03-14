@@ -1,10 +1,4 @@
-//
-//  NRApplicationSummaryMetrics.m
-//  NewRelicAPIClient
-//
-//  Created by Meyer, Chad on 3/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "NRApplicationSummaryMetrics.h"
 #import "WebRequest.h"

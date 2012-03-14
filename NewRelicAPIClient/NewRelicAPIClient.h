@@ -1,10 +1,4 @@
-//
-//  NewRelicAPIClient.h
-//  NewRelicAPIClient
-//
-//  Created by Meyer, Chad on 3/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 

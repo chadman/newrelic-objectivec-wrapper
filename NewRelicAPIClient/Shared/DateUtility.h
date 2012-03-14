@@ -19,6 +19,8 @@
 + (NSDate *)dateFromString:(NSString *)dateString;
 + (NSString *)stringFromDate:(NSDate *)date;
 
++ (NSString *)stringFromDateAndTimeFrom:(NSDate *)date;
+
 // Catch all for dates, insert a custom date format for the date
 + (NSString *)stringFromDate:(NSDate *)date withDateFormat: (NSString *)format;
 
